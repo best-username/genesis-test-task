@@ -7,7 +7,7 @@ by Andrii Yarosh
 
 1. Create a folder for new project and paste:
 
-git clone [link] .
+git clone git@github.com:best-username/genesis-test-task.git .
 
 2. Make sure that you have proper .env file
 
@@ -27,10 +27,10 @@ docker-compose up -d
 
 5. Go inside the container and make some staff
 
-docker-compose exec app bash
+docker-compose exec app composer install
 
-php artisan key:generate
+docker-compose exec app php artisan key:generate
 
-6. Use swagger to check that everything fine
+6. Use Swagger to check that everything fine
 
-http://127.0.0.1:8000
+Go to: https://editor.swagger.io/ and paste there https://github.com/AndriiPopovych/gses/blob/main/gses2swagger.yaml and change host: "gses2.app" to "127.0.0.1:8000"
